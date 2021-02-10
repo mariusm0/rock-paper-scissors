@@ -1,1 +1,1 @@
-# rock-paper-scissors
+This is my second project for TOP. I will be using html/css and JavaScript for making Rock Paper Scissors interactive game in browser.
