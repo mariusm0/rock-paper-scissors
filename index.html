@@ -10,15 +10,44 @@
     <script>
 
 //Function to randomly return 'rock' 'paper' or 'scissors'
-let choices = ['Rock' , 'Paper' , 'Scissors'];
-
+let choices = ['rock' , 'paper' , 'scissors'];
 function computerPlay(choices) {
-  var index = Math.floor(Math.random() * choices.length);
-  let randomChoice = choices[index];
-  console.log(randomChoice);
+  let index = Math.floor(Math.random() * choices.length);
+  return choices[index];
 }
 
-computerPlay(choices);
+//Function to take two parameters playerSelection and computerSelection and then return a string that declares the winner of the round 
+function playRound(playerSelection2, computerSelection) {
+if (playerSelection2 === "rock" && computerSelection === "paper") {
+alert("You Lose! Paper beats Rock");
+} else if (playerSelection2 === "rock" && computerSelection === "rock") {
+    alert("It's a tie!");
+} else if (playerSelection2 === "rock" && computerSelection === "scissors") {
+alert("You Win! Rock beats Scissors");
+} else if (playerSelection2 === "paper" && computerSelection === "rock") {
+    alert("You Win! Paper beats Rock!");
+} else if (playerSelection2 === "paper" && computerSelection === "paper") {
+    alert("It's a tie!");
+} else if (playerSelection2 === "paper" && computerSelection === "scissors") {
+    alert("You Lose! Scissors beats Paper!");
+} else if (playerSelection2 === "scissors" && computerSelection === "rock") {
+    alert("You Lose! Rock beats Scissors!");
+} else if (playerSelection2 === "scissors" && computerSelection === "paper") {
+    alert("You Win! Scissors beats Paper!");
+} else if (playerSelection2 === "scissors" && computerSelection === "scissors") {
+    alert("It's a tie!");
+} else {
+    alert('Choose Rock Paper or Scissors');
+}
+}
+
+const playerSelection1 = prompt("Choose paper rock or scissors");
+const playerSelection2 = playerSelection1.toLowerCase();
+const computerSelection = computerPlay(choices);
+console.log(playRound(playerSelection2, computerSelection));
+
+
+
 
     </script>
 
