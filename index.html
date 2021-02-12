@@ -1,50 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock-Paper-Scissors LOTR Edition</title>
 </head>
+
 <body>
     <script>
 
-//Function to randomly return 'rock' 'paper' or 'scissors'
-let choices = ['rock' , 'paper' , 'scissors'];
-function computerPlay(choices) {
-  let index = Math.floor(Math.random() * choices.length);
-  return choices[index];
-}
+        //Function to randomly return 'rock' 'paper' or 'scissors'
 
-//Function to take two parameters playerSelection and computerSelection and then return a string that declares the winner of the round 
-function playRound(playerSelection, computerSelection) {
-if (playerSelection === "rock" && computerSelection === "paper") {
-alert("You Lose! Paper beats Rock");
-} else if (playerSelection === "rock" && computerSelection === "rock") {
-    alert("It's a tie!");
-} else if (playerSelection === "rock" && computerSelection === "scissors") {
-alert("You Win! Rock beats Scissors");
-} else if (playerSelection === "paper" && computerSelection === "rock") {
-    alert("You Win! Paper beats Rock!");
-} else if (playerSelection === "paper" && computerSelection === "paper") {
-    alert("It's a tie!");
-} else if (playerSelection === "paper" && computerSelection === "scissors") {
-    alert("You Lose! Scissors beats Paper!");
-} else if (playerSelection === "scissors" && computerSelection === "rock") {
-    alert("You Lose! Rock beats Scissors!");
-} else if (playerSelection === "scissors" && computerSelection === "paper") {
-    alert("You Win! Scissors beats Paper!");
-} else if (playerSelection === "scissors" && computerSelection === "scissors") {
-    alert("It's a tie!");
-} else {
-    alert('Choose Rock Paper or Scissors');
-}
-}
+        let choices = ['rock', 'paper', 'scissors'];
+        function computerPlay(choices) {
+            let index = Math.floor(Math.random() * choices.length);
+            return choices[index];
+        }
 
-const promptChoice = prompt("Choose paper rock or scissors");
-const playerSelection = promptChoice.toLowerCase();
-const computerSelection = computerPlay(choices);
-console.log(playRound(playerSelection, computerSelection));
+        //Function to take two parameters playerSelection and computerSelection and then return a string that declares the winner of the round 
+
+
+
+        function game() {
+
+            let myScore = 0;
+            let pcScore = 0;
+
+
+            while ((pcScore < 5) && (myScore < 5)) {
+
+                function playRound(playerSelection, computerSelection) {
+
+                    if (playerSelection === "rock" && computerSelection === "paper") {
+                        console.log("You Lose! Paper beats Rock");
+                        pcScore++;
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "rock" && computerSelection === "rock") {
+                        console.log("It's a tie!");
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "rock" && computerSelection === "scissors") {
+                        console.log("You Win! Rock beats Scissors");
+                        myScore++;
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "paper" && computerSelection === "rock") {
+                        console.log("You Win! Paper beats Rock!");
+                        myScore++;
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "paper" && computerSelection === "paper") {
+                        console.log("It's a tie!");
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "paper" && computerSelection === "scissors") {
+                        console.log("You Lose! Scissors beats Paper!");
+                        pcScore++;
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "scissors" && computerSelection === "rock") {
+                        console.log("You Lose! Rock beats Scissors!");
+                        pcScore++;
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "scissors" && computerSelection === "paper") {
+                        console.log("You Win! Scissors beats Paper!");
+                        myScore++;
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else if (playerSelection === "scissors" && computerSelection === "scissors") {
+                        console.log("It's a tie!");
+                        console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                    } else {
+                        console.log('Choose Rock Paper or Scissors');
+                    }
+                    if (myScore === 5) {
+                        console.log("You won the game!");
+                    } else if (pcScore === 5) {
+                        console.log("PC won the game!");
+                    }
+                    return [myScore, pcScore];
+                }
+                const computerSelection = computerPlay(choices);
+                let promptChoice = prompt("Choose paper rock or scissors");
+                const playerSelection = promptChoice.toLowerCase();
+                console.log(playRound(playerSelection, computerSelection));
+            }
+        }
+
+
+        game();
+
 
 
 
@@ -53,4 +94,5 @@ console.log(playRound(playerSelection, computerSelection));
 
 
 </body>
+
 </html>
