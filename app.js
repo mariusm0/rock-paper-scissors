@@ -6,15 +6,25 @@
       return choices[index];
   }
 
+  //Add event listener for selection
+
+const imgs = document.querySelectorAll('img');
+
+imgs.forEach((img) => {
+
+  img.addEventListener('click', (e) => {
+    const computerSelection = computerPlay(choices);
+      playRound(e.target.id, computerSelection);
+  });
+});
+
   //Function to take two parameters playerSelection and computerSelection, loop game until player or computer scores 5 points and then return a string that declares the winner of the game
 
-  function game() {
 
-      let myScore = 0;
-      let pcScore = 0;
+    let myScore = 0;
+    let pcScore = 0;
 
-
-      while ((pcScore < 5) && (myScore < 5)) {
+    while ((pcScore < 5) && (myScore < 5)) {
 
           function playRound(playerSelection, computerSelection) {
 
@@ -61,11 +71,7 @@
               }
               return [myScore, pcScore];
           }
-          const computerSelection = computerPlay(choices);
-          let promptChoice = prompt("Choose paper rock or scissors");
-          const playerSelection = promptChoice.toLowerCase();
           console.log(playRound(playerSelection, computerSelection));
-      }
-  }
+        }
 
 

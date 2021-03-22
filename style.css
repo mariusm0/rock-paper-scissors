@@ -22,7 +22,7 @@ img {
     margin-left: 30px;
     border: 5px solid hsl(0, 0%, 40%);
   padding: 5px;
-  background: hsl(0, 0%, 20%);
+  background: hsl(32, 40%, 60%);
   outline: 5px solid hsl(0, 0%, 60%);
   box-shadow:
       0 0 0 10px hsl(0, 0%, 80%),
