@@ -32,6 +32,40 @@ img {
 }
 
 
+.result {
+    color: white;
+text-align: center;
+border: white 1px solid;
+background-color: black;
+opacity: 0.8;
+border: 5px solid hsl(0, 0%, 40%);
+padding: 20px;
+background: hsl(0, 0%, 0%);
+outline: 5px solid hsl(0, 0%, 60%);
+box-shadow:
+  0 0 0 10px hsl(0, 0%, 80%),
+  0 0 0 15px hsl(0, 0%, 90%);
+  margin-left: 50px;
+  margin-bottom: 50px;
+  width: 300px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: absolute;
+  right: 510px;
+  margin-top: 20px;
+}
+
+
+
+
+
+
+
+
+
+
 
 
 

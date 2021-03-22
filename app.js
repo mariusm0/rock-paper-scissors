@@ -27,51 +27,53 @@ imgs.forEach((img) => {
     while ((pcScore < 5) && (myScore < 5)) {
 
           function playRound(playerSelection, computerSelection) {
+              const result1 = document.querySelector('.result1');
+              const result2 = document.querySelector('.result2');
 
               if (playerSelection === "rock" && computerSelection === "paper") {
-                  console.log("You Lose! Paper beats Rock");
+                  result1.textContent = "You Lose! Paper beats Rock";
                   pcScore++;
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                  result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "rock" && computerSelection === "rock") {
-                  console.log("It's a tie!");
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                result1.textContent = "It's a tie!";
+                result2.textContent ="Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "rock" && computerSelection === "scissors") {
-                  console.log("You Win! Rock beats Scissors");
+                result1.textContent = "You Win! Rock beats Scissors";
                   myScore++;
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                  result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "paper" && computerSelection === "rock") {
-                  console.log("You Win! Paper beats Rock!");
+                result1.textContent = "You Win! Paper beats Rock!";
                   myScore++;
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                  result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "paper" && computerSelection === "paper") {
-                  console.log("It's a tie!");
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                result1.textContent = "It's a tie!";
+                result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "paper" && computerSelection === "scissors") {
-                  console.log("You Lose! Scissors beats Paper!");
+                result1.textContent = "You Lose! Scissors beats Paper!";
                   pcScore++;
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                  result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "scissors" && computerSelection === "rock") {
-                  console.log("You Lose! Rock beats Scissors!");
+                result1.textContent = "You Lose! Rock beats Scissors!";
                   pcScore++;
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                  result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "scissors" && computerSelection === "paper") {
-                  console.log("You Win! Scissors beats Paper!");
+                result1.textContent = "You Win! Scissors beats Paper!";
                   myScore++;
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                  result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else if (playerSelection === "scissors" && computerSelection === "scissors") {
-                  console.log("It's a tie!");
-                  console.log("Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore);
+                result1.textContent = "It's a tie!";
+                result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
               } else {
-                  console.log('Choose Rock Paper or Scissors');
+                result1.textContent = 'Choose Rock Paper or Scissors';
               }
               if (myScore === 5) {
-                  console.log("You won the game!");
+                result1.textContent = "You won the game!";
               } else if (pcScore === 5) {
-                  console.log("PC won the game!");
+                result1.textContent = "PC won the game!";
               }
               return [myScore, pcScore];
           }
-          console.log(playRound(playerSelection, computerSelection));
+          result.textContent = playRound(playerSelection, computerSelection);
         }
 
 
