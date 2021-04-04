@@ -63,10 +63,7 @@ imgs.forEach((img) => {
               } else if (playerSelection === "scissors" && computerSelection === "scissors") {
                 result1.textContent = "It's a tie!";
                 result2.textContent = "Your score:" + " " + myScore + " " + "Computer score:" + " " + pcScore;
-              } else {
-                result1.textContent = 'Choose Rock Paper or Scissors';
-              }
-              if (myScore === 5) {
+              }  if (myScore === 5) {
                 result1.textContent = "You won the game!";
               } else if (pcScore === 5) {
                 result1.textContent = "PC won the game!";

@@ -31,31 +31,47 @@ img {
       margin-bottom: 50px;
 }
 
+img:hover {
+    margin-left: 30px;
+  padding: 5px;
+  background: hsla(32, 40%, 60%, 0.856);
+  outline: 5px solid hsl(0, 0%, 60%);
+  box-shadow:
+      0 0 0 10px hsl(0, 0%, 80%),
+      0 0 0 15px hsl(0, 0%, 90%);
+      margin-left: 50px;
+      margin-bottom: 50px;
+}
+
 
 .result {
     color: white;
 text-align: center;
 border: white 1px solid;
-background-color: black;
 opacity: 0.8;
 border: 5px solid hsl(0, 0%, 40%);
 padding: 20px;
-background: hsl(0, 0%, 0%);
+background: hsla(0, 0%, 0%, 0.589);
 outline: 5px solid hsl(0, 0%, 60%);
 box-shadow:
   0 0 0 10px hsl(0, 0%, 80%),
   0 0 0 15px hsl(0, 0%, 90%);
-  margin-left: 50px;
+  margin-left: 450px;
   margin-bottom: 50px;
-  width: 300px;
-  height: 50px;
+  width: 500px;
+  height: 70px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  position: absolute;
   right: 510px;
   margin-top: 20px;
+  font-family: 'Kiwi Maru', serif;
+  font-size: 1.5em;
 }
+
+
+
+
 
 
 
